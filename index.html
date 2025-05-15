@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Homepage Template</title>
+    <title>Academic Homepage</title>
     <style>
         * {
             margin: 0;
@@ -31,10 +31,23 @@
             padding-bottom: 20px;
         }
 
-        .name {
+        .name-container {
+            margin-bottom: 10px;
+        }
+
+        .official-name {
             font-size: 2.5em;
             color: #2c3e50;
-            margin-bottom: 10px;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .chinese-name {
+            font-size: 1.4em;
+            color: #7f8c8d;
+            display: block;
+            margin-top: 8px;
+            font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
         }
 
         .position {
@@ -110,9 +123,16 @@
             color: #7f8c8d;
         }
 
+        /* 响应式设计 */
         @media (max-width: 768px) {
             .main-content {
                 flex-direction: column;
+            }
+            .official-name {
+                font-size: 2em;
+            }
+            .chinese-name {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -120,8 +140,11 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="name">Your Name</h1>
-            <p class="position">Position Title<br>Institution Name</p>
+            <div class="name-container">
+                <span class="official-name">Tadashi Takayanagi</span>
+                <span class="chinese-name">高柳 匡 (Takayanagi Tadashi)</span>
+            </div>
+            <p class="position">Professor of Physics<br>Kyoto University</p>
         </header>
 
         <nav class="nav-menu">
@@ -135,37 +158,38 @@
         <div class="main-content">
             <aside class="sidebar">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Email: your.email@institution.edu<br>
-                    Phone: +XX-XXX-XXXX-XXXX<br>
-                    Address: Department Name<br>
-                    Institution Name<br>
-                    City, Country</p>
+                    <h3 class="section-title">Contact</h3>
+                    <p>Email: example@yukawa.kyoto-u.ac.jp<br>
+                    Phone: +81-75-753-0000<br>
+                    Address: Yukawa Institute for Theoretical Physics<br>
+                    Kyoto University, Kyoto 606-8502<br>
+                    Japan</p>
                 </div>
             </aside>
 
             <main class="content">
-                <h2 class="section-title">Recent News</h2>
+                <h2 class="section-title">Latest News</h2>
                 <ul class="news-list">
                     <li class="news-item">
-                        <strong>2024.03.15</strong> - News item example text goes here
+                        <strong>2024.03.15</strong> - Presented new research at APS March Meeting
                     </li>
                     <li class="news-item">
-                        <strong>2024.02.28</strong> - Another news item example
+                        <strong>2024.02.28</strong> - Published new paper on holographic entanglement entropy
                     </li>
                 </ul>
 
                 <h2 class="section-title">Research Interests</h2>
                 <ul>
-                    <li>Research Area 1</li>
-                    <li>Research Area 2</li>
-                    <li>Research Area 3</li>
+                    <li>Holographic Entanglement Entropy</li>
+                    <li>Quantum Gravity</li>
+                    <li>String Theory</li>
+                    <li>AdS/CFT Correspondence</li>
                 </ul>
             </main>
         </div>
 
         <footer>
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>&copy; 2024 Tadashi Takayanagi. All rights reserved.</p>
         </footer>
     </div>
 </body>
